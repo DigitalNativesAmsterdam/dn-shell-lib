@@ -1,5 +1,7 @@
 #!/bin/bash
 
+curl -D - https://raw.githubusercontent.com/DigitalNativesAmsterdam/dn-shell-lib/main/logo.php | php
+
 normal=$(tput sgr0)
 green=$(tput setaf 2)
 blue=$(tput setaf 4)
