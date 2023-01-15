@@ -2,7 +2,7 @@
 
 define('GREEN', "\e[32m"); 
 define('WHITE', "\e[97m");
-define('DEFAULT', "\e[0m");
+define('COLOR_RESET', "\e[0m");
 
 define('CLEAR', chr(27).chr(91).'H'.chr(27).chr(91).'J');
 
@@ -87,4 +87,4 @@ function run() {
 }
 
 run();
-echo DEFAULT;
+echo COLOR_RESET;
