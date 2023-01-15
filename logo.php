@@ -80,12 +80,11 @@ function run() {
 		
 	}
 
-	sleep(3);
+	//sleep(3);
 
-	logo_spin($result);
+	//logo_spin($result);
 
 }
 
-while (true) {
-	run();
-}
+run();
+echo DEFAULT;
