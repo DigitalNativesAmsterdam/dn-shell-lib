@@ -64,7 +64,7 @@ function logo_spin($variant = 0) {
 
 function run() {
 
-	$speed = 3000;
+	$speed = 2000;
 
 	for ($i=0;$i<60;$i++) {
 		echo CLEAR;
