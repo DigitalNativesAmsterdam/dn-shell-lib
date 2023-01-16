@@ -1,21 +1,17 @@
 #!/bin/bash
 
-while true; do
+read -p "Are you sure you trust this script? (y/n) " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "Well you probably did, as you already executed it... Ok here we go!\n\n";
+else
+    # The idea is this cmd is not run...
+    curl -s https://cms.digitalnatives.nl/motd/$(whoami)-at-$(uname -n)-did-not-trust-this-script > /dev/null
+    exit;
+fi
 
-read -p "Are you sure you trust this script? (y/n) " yn
-
-case $yn in 
-	[yY] ) echo "Well you probably did, as you already executed it... Ok here we go!\n\n";
-		break;;
-	[nN] ) echo exiting...;
-		exit;;
-	* ) echo invalid response;;
-esac
-
-done
-
-
-
+# You will have to trust this script as well...
 curl -s https://raw.githubusercontent.com/DigitalNativesAmsterdam/dn-shell-lib/main/logo.php | php
 
 normal=$(tput sgr0)
