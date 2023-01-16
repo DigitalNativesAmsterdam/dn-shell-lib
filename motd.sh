@@ -1,7 +1,7 @@
 #!/bin/bash
 
 read -p "Are you sure you trust this script? (y/n) " -n 1 -r
-echo "\n"
+
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "Well you probably did, as you already executed it... Ok here we go!\n\n";
