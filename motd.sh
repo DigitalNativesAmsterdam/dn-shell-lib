@@ -1,5 +1,21 @@
 #!/bin/bash
 
+while true; do
+
+read -p "Are you sure you trust this script? (y/n) " yn
+
+case $yn in 
+	[yY] ) echo "Well you probably did, as you already executed it... Ok here we go!\n\n";
+		break;;
+	[nN] ) echo exiting...;
+		exit;;
+	* ) echo invalid response;;
+esac
+
+done
+
+
+
 curl -s https://raw.githubusercontent.com/DigitalNativesAmsterdam/dn-shell-lib/main/logo.php | php
 
 normal=$(tput sgr0)
